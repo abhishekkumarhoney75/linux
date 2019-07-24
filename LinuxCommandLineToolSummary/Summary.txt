@@ -1,0 +1,199 @@
+Summary
+
+
+
+-	The more time spent learning something, equals less time spent performing that particular task.
+
+-	This guide could also be considered a summarised version of the Linux Cookbook. If you are looking 
+	for a book with more detailed descriptions of each tool have a look at the Linux Cookbook Homepage, 
+	also check out the command list from "Linux in a Nutshell 3rd Edition" for an index of 300+ commands and their explanations.
+
+-	man ls -> Detailed list of option for each command.
+
+
+
+
+
+
+-	The Unix Tools Philosophy
+	
+	-	A tool is a simple program, usually designed for a specific purpose, it is sometimes referred to (at least throughout this document) as a command.
+
+	-	| (pipe operator) -> Sends the output of one program to the other
+
+
+		--------			--------
+	       |	|		       |	|
+	       |	|  Sending the op      |	|
+	       |	|  ---------------->   |	|
+	       |	|  as input            |	|
+	       |	|		       |	|
+		--------			--------
+		Program 1			Program 2
+		Tool 1				Tool 2
+	
+	-	To accomplish more complex tasks, tools would simply be connected together, using pipes.
+	
+	-	If Tool 1 can do something then do not try to make your own Tool 1. Reuse the Tool 1 this is the philosophy behind | operator.
+	
+
+
+
+
+-	Shell Tips
+
+
+
+	-	alias
+
+		-	alias cp='cp -vi' #to prompt when copying if you want to overwrite and will tell you where information is going 
+
+		-	alias rm='rm -i' #Prompts you if you really want to remove it.
+
+		-	alias mv='mv -i' #Prompts you if you are going to overwrite something
+
+
+
+
+	-	set -x
+
+		-	Using set with the -x option will make bash print out each command it is going to run before it runs it.
+
+		-	Use set +x to turn this back off.
+
+
+
+	
+	-	\ (backslash)
+	
+		-	The backslash escape character can be used before a shell command to override any aliases.
+
+		-	For example if rm was made into an alias for rm -i then typing “rm” would actually run rm -i.
+			However, typing \rm lets the shell ignore the alias and just run rm (its runs exactly what you type), 
+			this way it won't confirm if you want to delete things.
+
+		-	The “\” character can be used before special characters (such as a space or a wildcard), to stop bash from trying to expand them.
+
+
+
+
+	-	~ (tilde character)
+		
+		-	The tilde character is used as an alias to a users home directory.
+			For example, if your user-name was “fred”, instead of typing cd /home/fred you could simply type cd ~. 
+	
+
+
+	-	reset
+		
+		-	The reset command re-initializes your current terminal. This can be useful when the text from your terminal becomes garbled,
+			simply type “reset” and this will fix your terminal.
+
+
+
+	-	exit
+
+		-	Closes your current terminal (with x-terminals) or logs-out. Also try CTRL-D .
+
+
+
+
+	-	logout
+
+		-	Logs out of a terminal, also try CTRL-D .
+
+
+
+
+
+	-	echo
+
+		-	A little command that repeats anything you type.
+
+		-	echo "hell o world"	
+
+		-	Using echo allows you to expand the wildcards to understand what will happen before you actually run the command.
+
+		-	Also try using the -e option with echo. This will allow you to use the escape character sequences to format the output of a line.
+			Such as '\t' for tab, '\n' for newline etc.
+
+
+
+
+	-	
+
+		-	
+
+
+
+
+	-	
+
+		-
+
+
+
+	-	
+
+		-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
